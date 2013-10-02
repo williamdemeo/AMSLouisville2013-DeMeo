@@ -1,32 +1,22 @@
-AMSLouisville2013
-=================
+AMS Louisville 2013
+===================
 
-Slides for talk
+This repository contains slides for my talk as well as all the source
+code with which they were produced.
 
-Title
------ 
-Interval enforceable properties of finite groups
+Talk Details
+------------
 
-Format
------- 
-LaTeX Beamer
+- **Title** Interval enforceable properties of finite groups
 
-Conference
-----------
-AMS Southestern Sectional Meeting
+- **Format** LaTeX Beamer
 
-Location
---------
-University of Louisville, KY
+- **Conference** AMS Southestern Sectional Meeting
 
-Session
--------
-Special Session on Finite Universal Algebra
+- **Location** University of Louisville, KY
 
-Date
-----
-October 5, 2013.
+- **Session** Special Session on Finite Universal Algebra
 
-Current Status
---------------
-Very rough draft.
+- **Date** October 5, 2013
+
+- **Current Status** rough draft
