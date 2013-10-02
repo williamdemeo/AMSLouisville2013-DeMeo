@@ -8,16 +8,16 @@ code with which it was produced.
 Talk Details
 ------------
 
-- **Title** Interval enforceable properties of finite groups
+**Title:** Interval enforceable properties of finite groups
 
-- **Format** LaTeX Beamer
+**Format:** LaTeX Beamer
 
-- **Conference** AMS Southestern Sectional Meeting
+**Conference:** AMS Southestern Sectional Meeting
 
-- **Location** University of Louisville, KY
+**Location:** University of Louisville, KY
 
-- **Session** Special Session on Finite Universal Algebra
+**Session:** Special Session on Finite Universal Algebra
 
-- **Date** October 5, 2013
+**Date:** October 5, 2013
 
-- **Current Status** rough draft
+**Current Status:** rough draft
