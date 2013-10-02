@@ -1,8 +1,32 @@
 AMSLouisville2013
 =================
 
-Slides: Interval enforceable properties of finite groups
+Slides for talk
 
-This is a draft of the Beamer slides for my talk at the 
-AMS Southestern Sectional Meeting, at University of Louisville
-on October 5, 2013.
+Title
+----- 
+Interval enforceable properties of finite groups
+
+Format
+------ 
+LaTeX Beamer
+
+Conference
+----------
+AMS Southestern Sectional Meeting
+
+Location
+--------
+University of Louisville, KY
+
+Session
+-------
+Special Session on Finite Universal Algebra
+
+Date
+----
+October 5, 2013.
+
+Current Status
+--------------
+Very rough draft.
