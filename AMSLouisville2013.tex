@@ -1033,7 +1033,7 @@ L_c\cong \lb H_c,G_c\rb \; \Longrightarrow \; \text{$G_c$ does not have property
     \draw (-5,5.2) node {Then the lattice};
     \draw (-.93,5.2) node {$L$};
     \draw (.93,5.2) node {$L_c$};
-    \draw (8,4) node {wouldn't be group representable.};
+    \draw (8,4) node {could not be group representable.};
   \end{tikzpicture}
 %\end{center}
 }
@@ -1124,7 +1124,7 @@ assumptions,
 Nonsolvability is interval enforceable, but solvability is not. 
 \vskip4mm
 For if $L\cong \lb H, G \rb$, then for any nonsolvable 
-group $K$ we have $L\cong \lb H\times K, G\times K]$, and $G\times K$ is
+group $K$ we have $L\cong \lb H\times K, G\times K\rb$, and $G\times K$ is
 nonsolvable.  
 \vskip4mm
 Note that the group $H\times K$ at the bottom of
@@ -1298,16 +1298,16 @@ group $S^n$ by permutation of coordinates.
     (SnG) to [out=0,in=90] (DG) to [out=180,in=-90] (SnG)
     (Sn) to [out=0,in=90] (D) to [out=180,in=-90] (Sn);
     \draw 
-    (-3.75,3.75) node {$\Eq(n)'$}
-    (-.75,6.75) node {$L'$}
+    (-3.75,3.75) node {$\Eq(n)^*$}
+    (-.75,6.75) node {$L^*$}
     (2.3,2.25) node {$L$};
   \end{tikzpicture}
 }\end{center}
-The interval  $[D, S^n]$ is isomorphic to $\Eq(n)'$, the dual of the lattice of
+The interval  $\lb D, S^n\rb$ is isomorphic to $\Eq(n)^*$, the dual of the lattice of
 partitions of an $n$-element set.
 \vskip4mm
-  The dual lattice $L'$ is an upper interval of $\Sub(U)$, namely,
-  $L'\cong [D\bar{G}, U \rb$. 
+  The dual lattice $L^*$ is an upper interval of $\Sub(U)$, namely,
+  $L^*\cong \lb D\bar{G}, U \rb$. 
 \end{frame}
 
 \begin{frame}[label=IEPropsLemma2KeyPoint]{}
@@ -1316,8 +1316,8 @@ partitions of an $n$-element set.
 \[\text{  $D\bar{G}$ will be core-free in $U$. }\] 
 \vskip4mm
 Repeating the procedure, with $H_1 :=
-  D\bar{G}$ and $L' \cong \lb H_1, U \rb$, 
-we find $L = L''\cong [D_1 \bar{U}, S^m\bar{U}]$, where $m =
+  D\bar{G}$ and $L^* \cong \lb H_1, U \rb$, 
+we find $L = L^{**}\cong \lb D_1 \bar{U}, S^m\bar{U} \rb$, where $m =
   |U:H_1|$, and $D_1$ is the diagonal subgroup of $S^m$.
   \vskip4mm
   Since $D_1\bar{U}$ is core-free in $S^m \bar{U}$, %(as proved below), 
@@ -1785,18 +1785,55 @@ It is obvious that
 
 
 
+%% \begin{frame}[fragile,label=OSTheorem]{Aschbacher-O'Nan-Scott Theorem}
+%% See Peter Cameron's blog at 
+%% \begin{center}
+%% {\small  \url{http://cameroncounts.wordpress.com/tag/onan-scott-theorem/}}
+%% \end{center}
+%%  for some history.
+%% \end{frame}
 
 
+%% \begin{frame}[fragile,label=OSTheorem]{}
+%%   \begin{columns}
+%%     \begin{column}{0.4\textwidth}
+%%       \begin{center}
+%% \includegraphics[height=30mm]{aux/Aschbacher3}\\
+%% \includegraphics[height=25mm]{aux/ONan}\\
+%% \includegraphics[height=28mm]{aux/Scott}
+%%       \end{center}
+%%     \end{column}
+%%     \begin{column}{0.6\textwidth}
+%% See Peter Cameron's blog at\\
+%%  {\small  \url{http://cameroncounts.wordpress.com/tag/onan-scott-theorem/}}\\
+%%  for some history.
+%%     \end{column}
+%%   \end{columns}
+%% \end{frame}
 
 \begin{frame}[fragile,label=OSTheorem]{}
-\vskip2mm
-\hskip3mm
-\includegraphics[height=30mm]{aux/Aschbacher3}
-\begin{center}
-\includegraphics[height=25mm]{aux/ONan}
-\end{center}
-\hfill    
+  \begin{center}
+  \includegraphics[height=30mm]{aux/Aschbacher3}\hskip1cm
+\includegraphics[height=25mm]{aux/ONan}\hskip1cm
 \includegraphics[height=28mm]{aux/Scott}
+  \end{center}
+See Peter Cameron's blog at\\[6pt]
+ {\small  \url{http://cameroncounts.wordpress.com/tag/onan-scott-theorem/}}\\[6pt]
+ for some interesting history.
+\end{frame}
+
+
+
+%% \begin{frame}[fragile,label=OSTheorem]{}
+%% \vskip2mm
+%% \hskip3mm
+%% \includegraphics[height=30mm]{aux/Aschbacher3}
+%% \begin{center}
+%% \includegraphics[height=25mm]{aux/ONan}
+%% \end{center}
+%% \hfill    
+%% \includegraphics[height=28mm]{aux/Scott}
+
 %% %% \vskip3mm
 %% \begin{center}
 %% \includegraphics[height=29mm]{Aschbacher3}
@@ -1845,13 +1882,6 @@ the diagonal action. The degree $d = |T|^{m-1}$.
 \end{enumerate}
 \end{frame}
 
-\begin{frame}[fragile,label=OSTheorem]{Aschbacher-O'Nan-Scott Theorem}
-See Peter Cameron's blog at 
-\begin{center}
-{\small  \url{http://cameroncounts.wordpress.com/tag/onan-scott-theorem/}}
-\end{center}
- for some history.
-\end{frame}
 
 % \begin{frame}[fragile,label=FinalConclusions]{}
 %   \begin{center}
