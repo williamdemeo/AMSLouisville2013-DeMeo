@@ -35,9 +35,9 @@
 }
 
 \date[]{\vskip1cm
-{\color{darkred}University of Louisville}\\[6pt]
-{\small AMS Southwestern Sectional Meeting\\[6pt]
-October 5, 2013}
+AMS Southwestern Sectional Meeting\\[6pt]
+October 5, 2013\\[6pt]
+{\color{darkred}University of Louisville}
 }
 
 \titlegraphic{
@@ -63,7 +63,7 @@ October 5, 2013}
 \begin{document}
 \thicklines
 
-\includeonlyframes{titlepage,Motivation1,Motivation,LocalStructure,Parachutes,ExamplesPrezi,Examples,Example7elementPrezi,ASClass,IEProps,IEPropsLemma,IEPropsConjecture,IEPropsLemma2,SubgroupLatticeBasics,IntervalIsomorphisms,ExampleOfPermutingIso,Dedekind,ProofOfIntervalIsomorphism,L7second,IdeaOfL7Proof,OSTheorem,OSTheoremHistory,FinalConclusions,IEPropsInsoluble,MO}
+\includeonlyframes{titlepage,Motivation1,Motivation,LocalStructure,Parachutes,ExamplesPrezi,Examples,Example7elementPrezi,ASClass,IEProps,IEPropsLemma,IEPropsConjecture,IEPropsLemma2,L7second,IdeaOfL7Proof,OSTheorem,OSTheoremHistory,FinalConclusions,IEPropsInsoluble,MO}
 
 
 
@@ -160,8 +160,8 @@ class of nonisomorphic groups.
 \end{itemize}
 \end{exs}
 \vskip4mm
-\uncover<2->{At the other extreme, there are finite lattices that are not subgroup lattices.}
-
+\uncover<2->{At the other extreme, there are finite lattices that are not subgroup lattices.}\\[6pt]
+\uncover<2->{Example?}
 \end{frame}
 \renewcommand\dotsize{.8pt}
 
@@ -225,7 +225,7 @@ super-solvable.
 We are interested in the local structure of subgroup lattices, that is,
 the possible \defn{intervals}
 \[
-[H, K] := \{X \mid H \leq X \leq K\} \leq \Sub(G)
+\lb H, K \rb := \{X \mid H \leq X \leq K\} \leq \Sub(G)
 \]
 where $H \leq K \leq G$. 
 \vskip4mm
@@ -233,7 +233,7 @@ We restrict our attention to \defn{upper intervals}, where $K = G$, and ask two
 questions:
 \vskip4mm
 \begin{enumerate}
-\item \emph{What intervals $[H,G]$ are possible?}
+\item \emph{What intervals $\lb H,G \rb$ are possible?}
 \vskip4mm
 \item \emph{What properties of a group $G$ can be inferred from the shape of an
   upper interval in $Sub(G)$?}
@@ -243,7 +243,7 @@ questions:
 \begin{frame}[fragile,label=LocalStructureCoreFree]{}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
 If $N \subnormal G$
-with $N \leq H$, then  $[H, G]\cong [H/N, G/N]$, 
+with $N \leq H$, then  $\lb H, G \rb\cong \lb H/N, G/N]$, 
 \vskip2mm
 so we often assume $H$ is \defn{core-free}:
 \[
@@ -256,14 +256,14 @@ so we often assume $H$ is \defn{core-free}:
 \note{Historically, less attention was paid to the local structure of the
 subgroup lattice of a finite group, perhaps because it seemed that very little
 about $G$ could be inferred from knowledge of an upper
-  interval $[H,G] := \{K \mid H\leq K \leq G\}$.
+  interval $\lb H,G \rb := \{K \mid H\leq K \leq G\}$.
 Recently, however, this topic has attracted more attention 
 owing to its connection to the most important open problem in
 universal algebra,
 the \emph{finite lattice representation problem} (\FLRP).}
 \end{frame}
 
-\begin{frame}[fragile,label=LocalStructure]{1. What intervals $[H,G]$ are possible?}
+\begin{frame}[fragile,label=LocalStructure]{1. What intervals $\lb H,G \rb$ are possible?}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
 %%  This is the problem of
 %% characterizing the lattices that are (isomorphic to) congruence lattices of
@@ -290,7 +290,7 @@ Otherwise, we will say
 \emph{``the \FLRP\ has a negative answer''} 
 and $\sL_0 \neq \sL_3$.
 \vskip4mm Thus, if there exists a finite lattice $L$ for which 
-there is no finite group $G$ with $L \cong [H,G]$ for some $H< G$,
+there is no finite group $G$ with $L \cong \lb H,G \rb$ for some $H< G$,
 then it will follow from the theorem that the \FLRP\ has a negative answer.
 \end{frame}
 
@@ -401,10 +401,10 @@ Let $U$ and $H$ be subgroups of a finite group.
     (UH) to [out=190,in=80] (U) to [out=10,in=-100] (UH);
     \visible<5->{\shade[top color=olivegreen,bottom color=gray!50] 
       (U) to [out=-10,in=100] (U0) to [out=170,in=-80] (U);
-      \draw (-7,0) node {$[U_0,U]:=\{V \mid U_0 \leq V \leq U\}$};}
+      \draw (-7,0) node {$\lb U_0,U \rb:=\{V \mid U_0 \leq V \leq U\}$};}
     % \visible<6->{  \shade[top color=blue,bottom color=gray!50] 
     %   (UH) to [out=-10,in=100] (H) to [out=170,in=-80] (UH);
-    %   \draw (7,6) node {$[H, \<U,H\>]$};}
+    %   \draw (7,6) node {$\lb H, \<U,H\>]$};}
     \visible<5->{ \node (V) at (-1.6,1.8) [fill,circle,inner sep=\dotsize] {};
       \draw (-2,2) node {$V$};}
     \end{tikzpicture}
@@ -435,12 +435,12 @@ Let $U$ and $H$ be subgroups of a finite group.
     \begin{column}{0.8\textwidth}
       \begin{itemize}
       \item<1-> If $H\subnormal \<U, H\>$, then %\\[4pt]
-        $UH = \<U, H\> \; \text{ and } \; [U_0, U] \cong [H, UH]$.\vskip2mm
+        $UH = \<U, H\> \; \text{ and } \; \lb U_0, U \rb \cong \lb H, UH \rb$.\vskip2mm
         \item<2-> Instead of $H\subnormal \<U,H\>$, assume only
           $UH = \<U,H\>$ and define   
           \begin{equation*}
             %      \label{eq:dedekind-1}
-            [U_0, U]^H := \{ V\in [U_0,U] \mid VH = HV\},
+            \lb U_0, U \rb^H := \{ V\in \lb U_0,U \rb \mid VH = HV\},
           \end{equation*}
           the \alert{$H$-permuting subgroups}.
           \vskip2mm 
@@ -448,7 +448,7 @@ Let $U$ and $H$ be subgroups of a finite group.
           define
           \begin{equation*}
             %  \label{eq:dedekind-2}
-            [U_0, U]_H := \{ V\in [U_0,U] \mid H\leq N_{UH}(V)\}, 
+            \lb U_0, U \rb_H := \{ V\in \lb U_0,U \rb \mid H\leq N_{UH}(V)\}, 
           \end{equation*}
           the \alert{$H$-invariant subgroups}: 
           $V^h = V \; (\forall h\in H)$.
@@ -462,11 +462,11 @@ Let $U$ and $H$ be subgroups of a finite group.
     \begin{lemma}
       \label{lemma-wjd-4}
       \begin{enumerate}
-      \item $[H, UH]  \cong  [U_0, U]^H \leq [U_0, U]$ 
-       % \only<6>{ and \hskip2mm $[U, UH] \cong  [U_0, H]^U \leq [U_0, H]$.}
+      \item $\lb H, UH \rb  \cong  \lb U_0, U \rb^H \leq \lb U_0, U \rb$ 
+       % \only<6>{ and \hskip2mm $\lb U, UH \rb \cong  \lb U_0, H \rb^U \leq \lb U_0, H \rb$.}
 \\[6pt]
-      \item If $U \subnormal UH$, then  $[U_0, U]_H  = [U_0, U]^H \leq [U_0, U]$.\\[6pt]
-      \item If $H \subnormal UH$,  then  $[U_0, U]_H  = [U_0, U]^H = [U_0, U]$.
+      \item If $U \subnormal UH$, then  $\lb U_0, U \rb_H  = \lb U_0, U \rb^H \leq \lb U_0, U \rb$.\\[6pt]
+      \item If $H \subnormal UH$,  then  $\lb U_0, U \rb_H  = \lb U_0, U \rb^H = \lb U_0, U \rb$.
       \end{enumerate}
     \end{lemma}
 }
@@ -494,7 +494,7 @@ proof of (iii) follows trivially from the Noether isomorphism theorem.
   \item<1-> Consider $G\cong C_3 \times S_3$, say,
     \[G = \<a,b,c \mid a^2, b^3, c^3, [b,a], [c,b], c^{-1}a^{-1}a^c\>\]
 \item<2->The subgroups 
-\[U = \<a,b\> \cong C_6, \qquad H = \<bc\>\cong C_3\]
+\\lb U = \<a,b\> \cong C_6, \qquad H = \<bc\>\cong C_3\]
 permute ($UH = HU$) but neither one normalizes the other.
   \end{itemize}
 \vskip4mm
@@ -576,10 +576,10 @@ In other words, no pentagons.
   \begin{columns}
     \begin{column}{0.45\textwidth}
       \begin{claim}[1]
-      $[H, UH]  \cong  [U_0, U]^H$ via
+      $\lb H, UH \rb  \cong  \lb U_0, U \rb^H$ via
         \begin{align*}
-          \phi: \;& [H, UH] \ni X \mapsto U\cap X \in [U_0, U]^H\\[6pt]
-          \psi: \;& [U_0, U]^H \ni V \mapsto VH \in [H, UH].
+          \phi: \;& \lb H, UH \rb \ni X \mapsto U\cap X \in \lb U_0, U \rb^H\\[6pt]
+          \psi: \;& \lb U_0, U \rb^H \ni V \mapsto VH \in \lb H, UH \rb.
         \end{align*}
       \end{claim}
     \end{column}
@@ -609,9 +609,9 @@ In other words, no pentagons.
   %%   \begin{column}{0.6\textwidth}
       \begin{proof}
         \begin{itemize}
-        \item[1.] For $X\in [H, UH]$,
-          check $U\cap X \in [U_0, U]^H$ by Dedekind's rule.\vskip6pt
-        \item[2.] For $V\in [U_0, U]^H$, $VH$ is a group in $[H, UH]$.\vskip6pt
+        \item[1.] For $X\in \lb H, UH \rb$,
+          check $U\cap X \in \lb U_0, U \rb^H$ by Dedekind's rule.\vskip6pt
+        \item[2.] For $V\in \lb U_0, U \rb^H$, $VH$ is a group in $\lb H, UH \rb$.\vskip6pt
         \item[3.]  Check $\psi \phi$ and $\phi \psi$ are the identity maps. \vskip6pt
         \item[4.] Check $\phi$ and $\psi$ are order preserving.
         \end{itemize}
@@ -623,7 +623,7 @@ In other words, no pentagons.
   \begin{columns}
     \begin{column}{0.45\textwidth}
       \begin{claim}[2]
-      $[U_0, U]^H$ is a sublattice of $[U_0,U]$.
+      $\lb U_0, U \rb^H$ is a sublattice of $\lb U_0,U \rb$.
       \end{claim}
     \end{column}
     \begin{column}{0.55\textwidth}
@@ -646,7 +646,7 @@ In other words, no pentagons.
     \end{column}
   \end{columns}
        \begin{proof}
-          Fix $V, W \in [U_0, U]^H$.\vskip6pt
+          Fix $V, W \in \lb U_0, U \rb^H$.\vskip6pt
           \begin{itemize}
           \item[1.] Check $V \join W = \<V, W\>$ permutes with $H$. (easy)\vskip10pt
           \item[2.]Check $V \cap W$ permutes with $H$.
@@ -668,7 +668,7 @@ In other words, no pentagons.
 
 
 
-\begin{frame}[label=IEProps]{2. What properties of $G$ can be inferred from $[H,G]$?}
+\begin{frame}[label=IEProps]{2. What properties of $G$ can be inferred from $\lb H,G \rb$?}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
 A group theoretical property $\cP$  (and the associated class $\sG_\cP$) is
 \vskip2mm
@@ -677,8 +677,8 @@ A group theoretical property $\cP$  (and the associated class $\sG_\cP$) is
 \defn{interval enforceable} (\IE) provided there exists a lattice
 $L$ such that
 \[
-%\text{ if $G\in \G$ and $L\cong [H,G]$ \; \longrightarrow \; G \text{ is a%$\cP$-group.}
-\text{ if $\;G\in \G\;$ and $\;L\cong [H,G],\;$  then $G$ has property $\cP$.}
+%\text{ if $G\in \G$ and $L\cong \lb H,G \rb$ \; \longrightarrow \; G \text{ is a%$\cP$-group.}
+\text{ if $\;G\in \G\;$ and $\;L\cong \lb H,G \rb,\;$  then $G$ has property $\cP$.}
 \]
 \vskip2mm
 
@@ -686,29 +686,29 @@ $L$ such that
 \defn{core-free interval enforceable} (cf-\IE) provided
 $\exists L$ st
 \[
-%L\cong [H,G] \text{ and $H$ core-free} \; \longrightarrow \; G \text{ is a $\cP$-group.}
-\text{ if $\;G\in \G,\; L\cong [H,G],\;H$ core-free, then $G$ has property $\cP$.}
+%L\cong \lb H,G \rb \text{ and $H$ core-free} \; \longrightarrow \; G \text{ is a $\cP$-group.}
+\text{ if $\;G\in \G,\; L\cong \lb H,G \rb,\;H$ core-free, then $G$ has property $\cP$.}
 \]
 \vskip2mm
 
 \item 
 \defn{minimal interval enforceable} (min-\IE)
-%% provided $\exists L$ st\\ if $L\cong [H,G]$ for a group $G$ of
-%% minimal order (with respect to $L\cong [H,G]$), then
+%% provided $\exists L$ st\\ if $L\cong \lb H,G \rb$ for a group $G$ of
+%% minimal order (with respect to $L\cong \lb H,G \rb$), then
 %% $G$ is a $\cP$-group.   
 provided $\exists L$ st\\ 
-if $\;G\in \G,\; L\cong [H,G],$ and if $G$ has minimal order (wrt
-$L\cong [H,G]$), then $G$ has property $\cP$.    
+if $\;G\in \G,\; L\cong \lb H,G \rb,$ and if $G$ has minimal order (wrt
+$L\cong \lb H,G \rb$), then $G$ has property $\cP$.    
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}[label=IEPropsInsoluble]{Examples}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
-\defn{Insolubility} 
+\defn{Nonsolvability} 
 \vskip2mm
 It's not hard to find examples of lattices that cannot occur as
-upper intervals in the subgroup lattices of finite soluble groups.
+upper intervals in the subgroup lattices of finite \emph{solvable} groups.
 \vskip4mm
 \uncover<2->{
 Here are a few
@@ -755,7 +755,7 @@ Here are a few
 The following are at least core-free interval enforceable:
 \vskip5mm
 \begin{itemize}
-\item $\sG_0 = \mathfrak{S}^c = $ the insoluble groups
+\item $\sG_0 = \mathfrak{S}^c = $ the nonsolvable groups
 \vskip2mm
 \item $\sG_1 =\{G\in \G \mid (\forall n<\omega) \; (G \neq A_n \text{ and }  G\neq S_n) \}$
 \vskip2mm
@@ -796,7 +796,7 @@ $(H\times K)/(1\times K) \cong H$ does not. }
 \begin{prop}
 \label{thm:except-seven-elem}
 Suppose $H<G$, $\core_G(H) = 1$, and 
-$L_7 \cong [H,G]$.  Then
+$L_7 \cong \lb H,G \rb$.  Then
 \begin{enumerate}[(i)]
 \item<1-> $G$ is a primitive permutation group.
 \item<1-> If $N\ssubnormal G$, then $C_G(N) = 1$.
@@ -804,9 +804,9 @@ $L_7 \cong [H,G]$.  Then
 \item<1-> $G$ is not solvable.
 \item<1-> $G$ is subdirectly irreducible.
 \item<1-> With the possible exception of at most one maximal subgroup, $M_1$ or $M_2$,
-  all proper subgroups in the interval $[H,G]$ are core-free. 
+  all proper subgroups in the interval $\lb H,G \rb$ are core-free. 
 
-%% The three subgroups in $[H,G]$ which cover $H$ (the atoms) are
+%% The three subgroups in $\lb H,G \rb$ which cover $H$ (the atoms) are
 %%   core-free.  At least one two of the three maximal subgroups (the co-atoms) in
 %%   the interval are core-free. 
 \end{enumerate}
@@ -869,7 +869,7 @@ $L_7 \cong [H,G]$.  Then
       \item<3-> If $1\neq N\leq J_1$, then $NH = J_1$, so $J_1$ and $K$ permute.
       \item<4-> Since $J_1K = G$ and $J_1\cap K = H$, our lemma yields
       \[
-        [J_1, G] \cong [H, K]^{J_1} = \{X \in[H, K] \mid J_1X=XJ_1 \}.
+        \lb J_1, G \rb \cong \lb H, K \rb^{J_1} = \{X \in\lb H, K \rb \mid J_1X=XJ_1 \}.
         \]
    \uncover<5->{Impossible!}
       \end{itemize}
@@ -909,16 +909,16 @@ then $\cP$ is an interval enforceable property.
 Since $\cP$ is cf-\IE\ there is a lattice $L$ such that
 \begin{equation}
   \label{eq:100}
-\left(L \cong [H,G] \quad \& \quad \core_G(H)=1\right) \; \longrightarrow \; G\in \sG_\cP.
+\left(L \cong \lb H,G \rb \quad \& \quad \core_G(H)=1\right) \; \longrightarrow \; G\in \sG_\cP.
 \end{equation}
 Under the assumption $\bH(\sG_\cP^c) = \sG_\cP^c$ we prove
 \begin{equation}
   \label{eq:200}
-L \cong [H,G] \; \longrightarrow \; G\in \sG_\cP.
+L \cong \lb H,G \rb \; \longrightarrow \; G\in \sG_\cP.
 \end{equation}
 If~(\ref{eq:200}) fails, then there is a
-group $G\in \sG_{\cP}^c$ with $L\cong [H,G]$.  Let $N = \core_G(H)$.  Then $L \cong
-[H/N,G/N]$ and $H/N$ is core-free in $G/N$ so, by hypothesis~(\ref{eq:100}),
+group $G\in \sG_{\cP}^c$ with $L\cong \lb H,G \rb$.  Let $N = \core_G(H)$.  Then $L \cong
+\lb H/N,G/N]$ and $H/N$ is core-free in $G/N$ so, by hypothesis~(\ref{eq:100}),
 $G/N \in \sG_\cP$.  But $G/N \in \sG_{\cP}^c$, since $\sG_{\cP}^c$ is closed under homomorphic images.
 \end{proof}
 \end{frame}
@@ -928,7 +928,7 @@ $G/N \in \sG_\cP$.  But $G/N \in \sG_{\cP}^c$, since $\sG_{\cP}^c$ is closed und
 The following are at least core-free interval enforceable:
 \vskip5mm
 \begin{itemize}
-\item $\sG_0 = \mathfrak{S}^c = $ the insoluble groups
+\item $\sG_0 = \mathfrak{S}^c = $ the nonsolvable groups
 \vskip2mm
 \item $\sG_1 =\{G\in \G \mid (\forall n<\omega) \; (G \neq A_n \text{ and }  G\neq S_n) \}$
 \vskip2mm
@@ -971,7 +971,7 @@ this property was described recently by Aschbacher and Shareshian.
 Thus, two classes that are known to be at least cf-\IE\ are
 \vskip2mm
 \begin{itemize}
-\item $\sG_0 = \mathfrak{S}^c = $ the (finite) insoluble groups
+\item $\sG_0 = \mathfrak{S}^c = $ the (finite) nonsolvable groups
 \vskip2mm
 \item $\sG_1 =\{G\in \G \mid (\forall n<\omega) \; (G \neq A_n \text{ and }  G\neq S_n) \}$
 \end{itemize}
@@ -992,7 +992,7 @@ Therefore, $\sG_0$ and $\sG_1$ are \IE\ classes.
 In contrast, suppose %in Section~\ref{sec:application} we will see an example of a
 there exists a finite lattice $L$ such that
  \[
- (L \cong [H, G] \,\text{ \& }\, \core_G(H)=1) \; \longrightarrow \; G
+ (L \cong \lb H, G \rb \,\text{ \& }\, \core_G(H)=1) \; \longrightarrow \; G
  \text{ is subdirectly irreducible.}  %\protect{\footnotemark}}
 \]
 The lemma doesn't apply in this case since the class of
@@ -1021,10 +1021,10 @@ lattice that is not group representable.
 its negation $\neg \cP$ are interval enforceable by the lattices $L$ and $L_c$,
 respectively:
 \[
-L\cong [H,G] \; \Longrightarrow \; \text{$G$ has property $\cP$}
+L\cong \lb H,G \rb \; \Longrightarrow \; \text{$G$ has property $\cP$}
 \]
 \[
-L_c\cong [H_c,G_c] \; \Longrightarrow \; \text{$G_c$ does not have property $\cP$}
+L_c\cong \lb H_c,G_c\rb \; \Longrightarrow \; \text{$G_c$ does not have property $\cP$}
 \]}
 \visible<3->{ %Then this lattice would not be group representable.  
 %\begin{center}
@@ -1053,12 +1053,12 @@ at least one of these lattices is not group representable.
 Assume on the contrary that both $\cP$ and $\neg \cP$
 are interval enforceable by group representable lattices $L$ and $L_c$. 
 \vskip2mm
-Let $G$ and $G_c$ be groups for which $L\cong [H,G]$ and $L_c\cong
-[H_c,G_c]$.
+Let $G$ and $G_c$ be groups for which $L\cong \lb H,G \rb$ and $L_c\cong
+\lb H_c,G_c\rb$.
 \vskip2mm
 Then $G\times G_c$ has upper intervals 
-\[L\cong [H\times G_c, G\times G_c]\; \text{ and }\;
-L_c\cong [G\times H_c, G\times G_c].\]  
+\[L\cong \lb H\times G_c, G\times G_c \rb\; \text{ and }\;
+L_c\cong \lb G\times H_c, G\times G_c \rb.\]  
 Therefore, by the interval enforceability
 assumptions, 
 \[
@@ -1073,12 +1073,12 @@ assumptions,
 Assume on the contrary that both $\cP$ and $\neg \cP$
 are interval enforceable by group representable lattices $L$ and $L_c$. 
 \vskip2mm
-Let $G$ and $G_c$ be groups for which $L\cong [H,G]$ and $L_c\cong
-[H_c,G_c]$.
+Let $G$ and $G_c$ be groups for which $L\cong \lb H,G \rb$ and $L_c\cong
+\lb H_c,G_c]$.
 \vskip2mm
 Then $G\times G_c$ has upper intervals 
-\[L\cong [H\times G_c, G\times G_c]\; \text{ and }\;
-L_c\cong [G\times H_c, G\times G_c].\]  
+\[L\cong \lb H\times G_c, G\times G_c \rb\; \text{ and }\;
+L_c\cong \lb G\times H_c, G\times G_c \rb.\]  
 Therefore, by the interval enforceability
 assumptions, 
 \[
@@ -1109,11 +1109,11 @@ assumptions,
 %% Assume on the contrary that both $\cP$ and $\neg \cP$
 %% are interval enforceable by group representable lattices $L$ and $L_c$.
 %% \vskip2mm
-%% Let $G$ and $G_c$ be groups for which $L\cong [H,G]$ and $L_c\cong
-%% [H_c,G_c]$.
+%% Let $G$ and $G_c$ be groups for which $L\cong \lb H,G \rb$ and $L_c\cong
+%% \lb H_c,G_c]$.
 %% \vskip2mm
 %% Then $G\times G_c$ has upper intervals 
-%% $L\cong [H\times G_c, G\times G_c]$ and 
+%% $L\cong \lb H\times G_c, G\times G_c]$ and 
 %% $L_c\cong [G\times H_c, G\times G_c]$.  Thus, by the IE
 %% assumptions, $G\times G_c$ both is and is not a $\cP$-group. 
 %% \end{proof}}
@@ -1121,11 +1121,11 @@ assumptions,
 
 \begin{frame}[label=IEPropsConjecture]{}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
-Insolubility is interval enforceable, but solubility is not. 
+Nonsolvability is interval enforceable, but solvability is not. 
 \vskip4mm
-For if $L\cong [H, G]$, then for any insoluble 
-group $K$ we have $L\cong [H\times K, G\times K]$, and $G\times K$ is
-insoluble.  
+For if $L\cong \lb H, G \rb$, then for any nonsolvable 
+group $K$ we have $L\cong \lb H\times K, G\times K]$, and $G\times K$ is
+nonsolvable.  
 \vskip4mm
 Note that the group $H\times K$ at the bottom of
 the interval is not core-free.  So a more interesting question is whether a
@@ -1156,7 +1156,7 @@ of the form $W = S\wr U$ that has property $\cP$.
 \end{lemma}
 \vskip4mm
 \begin{corollary}
-Solubility is not core-free interval enforceable.
+Solvability is not core-free interval enforceable.
 \end{corollary}
 \end{frame}
 
@@ -1164,11 +1164,11 @@ Solubility is not core-free interval enforceable.
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
 \alert{Proof Sketch}
 \vskip2mm
-  Let $L$ be a group representable lattice such that if $L\cong [H,G]$ and
+  Let $L$ be a group representable lattice such that if $L\cong \lb H,G \rb$ and
   $\core_G(H)=1$ then $G$ has property $\cP$.  
 \vskip4mm
   Since $L$ is group representable, $\exists\, G \vDash \cP$ with $L
-  \cong [H,G]$. 
+  \cong \lb H,G \rb$. 
 \vskip4mm
 \visible<2->{  We apply the idea of Hans Kurzweil twice:
 \begin{columns}
@@ -1198,11 +1198,11 @@ Denote this by  $\phi: G \rightarrow \Aut(S^n)$,
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
 \alert{Proof Sketch}
 \vskip2mm
-  Let $L$ be a group representable lattice such that if $L\cong [H,G]$ and
+  Let $L$ be a group representable lattice such that if $L\cong \lb H,G \rb$ and
   $\core_G(H)=1$ then $G$ has property $\cP$.  
 \vskip4mm
   Since $L$ is representable, $\exists\, G \vDash \cP$ with $L
-  \cong [H,G]$. 
+  \cong \lb H,G \rb$. 
 \vskip4mm
   We apply the idea of Hans Kurzweil twice:
   \begin{itemize}
@@ -1307,7 +1307,7 @@ The interval  $[D, S^n]$ is isomorphic to $\Eq(n)'$, the dual of the lattice of
 partitions of an $n$-element set.
 \vskip4mm
   The dual lattice $L'$ is an upper interval of $\Sub(U)$, namely,
-  $L'\cong [D\bar{G}, U]$. 
+  $L'\cong [D\bar{G}, U \rb$. 
 \end{frame}
 
 \begin{frame}[label=IEPropsLemma2KeyPoint]{}
@@ -1316,7 +1316,7 @@ partitions of an $n$-element set.
 \[\text{  $D\bar{G}$ will be core-free in $U$. }\] 
 \vskip4mm
 Repeating the procedure, with $H_1 :=
-  D\bar{G}$ and $L' \cong [H_1, U]$, 
+  D\bar{G}$ and $L' \cong \lb H_1, U \rb$, 
 we find $L = L''\cong [D_1 \bar{U}, S^m\bar{U}]$, where $m =
   |U:H_1|$, and $D_1$ is the diagonal subgroup of $S^m$.
   \vskip4mm
@@ -1330,7 +1330,7 @@ we find $L = L''\cong [D_1 \bar{U}, S^m\bar{U}]$, where $m =
 We conclude that a class of groups that does
 not include wreath products of the form $S\wr G$, where $S$ is an arbitrary
 finite nonabelian simple group, is not a core-free interval enforceable class. 
-The class of soluble groups is an example.
+The class of solvable groups is an example.
 \end{frame}
 
 
@@ -1347,12 +1347,12 @@ The following statements are equivalent:
 For every finite lattice $L$ and every finite collection $\sG_1, \dots, \sG_n$
 of cf-\IE\ classes of groups,
 \[
-\exists \; G \in \bigcap\limits_{i=1}^n \sG_i \text{ such that $L \cong [H,G]$
+\exists \; G \in \bigcap\limits_{i=1}^n \sG_i \text{ such that $L \cong \lb H,G \rb$
   and $\core_G(H)=1$}.
 \]
 \item[(D)]
 For every finite collection $\sL$ of finite lattices, there exists a finite
-group $G$ such that each $L_i \in \sL$ is isomorphic to $[H_i, G]$ for some
+group $G$ such that each $L_i \in \sL$ is isomorphic to $\lb H_i, G \rb$ for some
 core-free subgroup $H_i\leq G$.
 \end{enumerate}
 \end{theorem}
@@ -1597,7 +1597,7 @@ isomorphic to upper intervals of $\Sub(G)$.
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
     \begin{prop}
       \label{thm:except-seven-elem}
-      Suppose $H<G$, \hskip2mm $\core_G(H) = 1$, \hskip2mm $L_7 \cong [H,G]$.
+      Suppose $H<G$, \hskip2mm $\core_G(H) = 1$, \hskip2mm $L_7 \cong \lb H,G \rb$.
       \begin{enumerate}[(i)]
       \item<1-> $G$ is a primitive permutation group.
       \item<1-> If $N\ssubnormal G$, then $C_G(N) = 1$.
@@ -1605,7 +1605,7 @@ isomorphic to upper intervals of $\Sub(G)$.
       \item<1-> $G$ is not solvable.
       \item<1-> $G$ is subdirectly irreducible.
       \item<1-> With the possible exception of at most one maximal subgroup, %, $M_1$ or $M_2$,
-        all proper subgroups in the interval $[H,G]$ are core-free. 
+        all proper subgroups in the interval $\lb H,G \rb$ are core-free. 
       \end{enumerate}
     \end{prop}
 \end{frame}
@@ -1756,7 +1756,7 @@ It is obvious that
       \end{center}
     \begin{theorem}
       \label{thm:except-seven-elem}
-      Suppose $H<G$, \hskip2mm $\core_G(H) = 1$, \hskip2mm $L_7 \cong [H,G]$.
+      Suppose $H<G$, \hskip2mm $\core_G(H) = 1$, \hskip2mm $L_7 \cong \lb H,G \rb$.
       \begin{enumerate}[(i)]
       \item<1-> $G$ is a primitive permutation group.
       \item<1-> If $N\ssubnormal G$, then $C_G(N) = 1$.
@@ -1764,7 +1764,7 @@ It is obvious that
       \item<1-> $G$ is not solvable.
       \item<1-> $G$ is subdirectly irreducible.
       \item<1-> With the possible exception of at most one maximal subgroup, %, $M_1$ or $M_2$,
-        all proper subgroups in the interval $[H,G]$ are core-free. 
+        all proper subgroups in the interval $\lb H,G \rb$ are core-free. 
       \end{enumerate}
     \end{theorem}
 

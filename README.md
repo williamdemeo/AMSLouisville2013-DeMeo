@@ -5,8 +5,8 @@ The document AMSLouisville2013.pdf contains the slides for my talk.
 This repository contains that document as well as all the source
 code with which it was produced.
 
-Talk Details
-------------
+Details
+-------
 
 **Title:** Interval enforceable properties of finite groups
 
