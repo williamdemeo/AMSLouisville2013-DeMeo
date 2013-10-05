@@ -63,7 +63,7 @@ October 5, 2013\\[6pt]
 \begin{document}
 \thicklines
 
-\includeonlyframes{titlepage,Motivation1,Motivation,LocalStructure,Parachutes,ExamplesPrezi,Examples,Example7elementPrezi,ASClass,IEProps,IEPropsLemma,IEPropsConjecture,IEPropsLemma2,L7second,IdeaOfL7Proof,OSTheorem,OSTheoremHistory,FinalConclusions,IEPropsInsoluble,MO}
+\includeonlyframes{titlepage,Motivation1,Motivation,LocalStructure,Parachutes0,Parachutes2,ExamplesPrezi,Examples,Example7elementPrezi,ASClass,IEProps,IEPropsLemma,IEPropsConjecture,IEPropsLemma2,L7second,IdeaOfL7Proof,FinalConclusions,IEPropsInsoluble}
 
 
 
@@ -334,7 +334,7 @@ If $\sG_{\cP}$ denotes the collection of groups with property $\cP$, then
   group theoretical property. \\[6pt]
 Thus, we need not distinguish between a property of groups and the
   class of groups which possess it.
-\note{Occasionally we write $G \vDash \cP$ to indicate that $G$ has property $\cP$.}
+%\note{Occasionally we write $G \vDash \cP$ to indicate that $G$ has property $\cP$.}
 \vskip2cm
 \visible<2->{
 Let \G\ denote the class of all finite groups.\\[14pt]
@@ -670,7 +670,8 @@ In other words, no pentagons.
 
 \begin{frame}[label=IEProps]{2. What properties of $G$ can be inferred from $\lb H,G \rb$?}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
-A group theoretical property $\cP$  (and the associated class $\sG_\cP$) is
+A group theoretical property $\cP$  %(and the associated class $\sG_\cP$) 
+is
 \vskip2mm
 \begin{itemize}
 \item 
@@ -707,7 +708,7 @@ $L\cong \lb H,G \rb$), then $G$ has property $\cP$.
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
 \defn{Nonsolvability} 
 \vskip2mm
-It's not hard to find examples of lattices that cannot occur as
+There exist finite lattices that cannot occur as
 upper intervals in the subgroup lattices of finite \emph{solvable} groups.
 \vskip4mm
 \uncover<2->{
@@ -800,7 +801,7 @@ $L_7 \cong \lb H,G \rb$.  Then
 \begin{enumerate}[(i)]
 \item<1-> $G$ is a primitive permutation group.
 \item<1-> If $N\ssubnormal G$, then $C_G(N) = 1$.
-\item<1-> $G$ contains no non-trivial abelian normal subgroup.
+\item<1-> $G$ contains no nontrivial abelian normal subgroup.
 \item<1-> $G$ is not solvable.
 \item<1-> $G$ is subdirectly irreducible.
 \item<1-> With the possible exception of at most one maximal subgroup, $M_1$ or $M_2$,
@@ -867,7 +868,7 @@ $L_7 \cong \lb H,G \rb$.  Then
       If $N\ssubnormal G$ then $NH$ permutes with each subgroup containing $H$.  
       \note{Let $H \leq X \leq G$.  Then $NHX = NX = XN= XHN = XNH$.}
       \item<3-> If $1\neq N\leq J_1$, then $NH = J_1$, so $J_1$ and $K$ permute.
-      \item<4-> Since $J_1K = G$ and $J_1\cap K = H$, our lemma yields
+      \item<4-> Since $J_1K = G$ and $J_1\cap K = H$, 
       \[
         \lb J_1, G \rb \cong \lb H, K \rb^{J_1} = \{X \in\lb H, K \rb \mid J_1X=XJ_1 \}.
         \]
@@ -1041,7 +1042,7 @@ L_c\cong \lb H_c,G_c\rb \; \Longrightarrow \; \text{$G_c$ does not have property
 
 \begin{frame}[label=IEPropsLemma]{}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
-As the next result shows, however, if a group property and its
+But if a group property and its
 negation are interval enforceable by $L$ and $L_c$, then already
 at least one of these lattices is not group representable.
 \vskip5mm
@@ -1144,20 +1145,26 @@ then $\neg \cP$ is not core-free interval enforceable by a group representable l
 
 \begin{frame}[label=IEPropsLemma2]{}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
-The following lemma shows that 
-any class of groups that omits certain wreath products cannot be core-free
+Any class of groups that omits certain wreath products cannot be core-free
 interval enforceable by a group representable lattice. 
 \vskip4mm
-\begin{lemma}
+\begin{theorem}
 Suppose $\cP$ is core-free interval enforceable by a group
 representable lattice.   
 Then, for any finite nonabelian simple group $S$, there exists a wreath product group
 of the form $W = S\wr U$ that has property $\cP$. 
-\end{lemma}
+\end{theorem}
 \vskip4mm
+\visible<2->{
 \begin{corollary}
-Solvability is not core-free interval enforceable.
+Solvable is not a core-free interval enforceable property.
 \end{corollary}
+}
+\visible<3->{
+\begin{corollary}
+Almost simple is not a core-free interval enforceable property.
+\end{corollary}
+}
 \end{frame}
 
 \begin{frame}[label=IEPropsLemma2]{}
@@ -1167,10 +1174,12 @@ Solvability is not core-free interval enforceable.
   Let $L$ be a group representable lattice such that if $L\cong \lb H,G \rb$ and
   $\core_G(H)=1$ then $G$ has property $\cP$.  
 \vskip4mm
-  Since $L$ is group representable, $\exists\, G \vDash \cP$ with $L
-  \cong \lb H,G \rb$. 
+  Since $L$ is group representable, $\exists\, G$ with $L
+  \cong \lb H,G \rb$.
+%% \vskip4mm
+%% \visible<2->{ (So $G$ has property $\cP$.)}
 \vskip4mm
-\visible<2->{  We apply the idea of Hans Kurzweil twice:
+\visible<3->{ Use Kurzweil's method for representing duals of lattices (twice):
 \begin{columns}
     \begin{column}{0.2\textwidth}
   \begin{center}
@@ -1201,7 +1210,7 @@ Denote this by  $\phi: G \rightarrow \Aut(S^n)$,
   Let $L$ be a group representable lattice such that if $L\cong \lb H,G \rb$ and
   $\core_G(H)=1$ then $G$ has property $\cP$.  
 \vskip4mm
-  Since $L$ is representable, $\exists\, G \vDash \cP$ with $L
+  Since $L$ is representable, $\exists\, G$ with property $\cP$ such that $L
   \cong \lb H,G \rb$. 
 \vskip4mm
   We apply the idea of Hans Kurzweil twice:
@@ -1327,16 +1336,19 @@ we find $L = L^{**}\cong \lb D_1 \bar{U}, S^m\bar{U} \rb$, where $m =
 
 \begin{frame}[label=IEPropsLemma2]{}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
-We conclude that a class of groups that does
-not include wreath products of the form $S\wr G$, where $S$ is an arbitrary
-finite nonabelian simple group, is not a core-free interval enforceable class. 
-The class of solvable groups is an example.
+The only technical part is proving the
+\vskip4mm
+{\bf Claim:} If you start with a core-free subgroup $H<G$, then after applying Kurzweil twice, the subgroup at the bottom of $L^{**}$ is core-free.
+\vskip4mm
+\visible<2->{So a class of groups that omits wreath products of the form $S\wr G$, where $S$ is an arbitrary finite nonabelian simple group, is not a core-free interval enforceable class.  
+\vskip4mm
+Examples: the class of solvable groups, the class of almost simple groups.}
 \end{frame}
 
 
 
 
-\begin{frame}[fragile,label=Parachutes]{}
+\begin{frame}[fragile,label=Parachutes0]{}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
 \begin{theorem}
 The following statements are equivalent:
@@ -1358,7 +1370,7 @@ core-free subgroup $H_i\leq G$.
 \end{theorem}
 \end{frame}
 
-\begin{frame}[fragile,label=Parachutes]{}
+\begin{frame}[fragile,label=Parachutes0]{}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
 By (C), the \FLRP\ would have a negative answer if we
 could find a collection $\sG_1, \dots, \sG_n$ of cf-\IE\ classes
@@ -1367,9 +1379,17 @@ such that $\bigcap\limits_{i=1}^n \sG_i$ is empty.
 By (D), it makes sense to consider finite collections of finite lattices and ask
 what can be proved about a group $G$ if one assumes that all of these lattices are
 isomorphic to upper intervals of $\Sub(G)$. 
+\vskip6mm
+\visible<2->{
+{\bf Questions:}\\[6pt]
+1. We have only considered interval enforceable properties.\\
+\hskip4mm What about property enforceable intervals?\\[6pt]
+\visible<3->{
+2. Could PE intervals be used to prove Nice Boring Theorems?}
+}
 \end{frame}
 
-\begin{frame}[fragile,label=Parachutes]{}
+\begin{frame}[fragile,label=Parachutes1]{}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
 \begin{center}
 {\scalefont{.8}
@@ -1409,7 +1429,7 @@ isomorphic to upper intervals of $\Sub(G)$.
 
 \end{frame}
 
-\begin{frame}[fragile,label=Parachutes]{}
+\begin{frame}[fragile,label=Parachutes2]{}
 %\ifthenelse{\boolean{prezi}}{\FontLarge}{}
 
 \begin{center}
@@ -1601,7 +1621,7 @@ isomorphic to upper intervals of $\Sub(G)$.
       \begin{enumerate}[(i)]
       \item<1-> $G$ is a primitive permutation group.
       \item<1-> If $N\ssubnormal G$, then $C_G(N) = 1$.
-      \item<1-> $G$ contains no non-trivial abelian normal subgroup.
+      \item<1-> $G$ contains no nontrivial abelian normal subgroup.
       \item<1-> $G$ is not solvable.
       \item<1-> $G$ is subdirectly irreducible.
       \item<1-> With the possible exception of at most one maximal subgroup, %, $M_1$ or $M_2$,
@@ -1760,10 +1780,10 @@ It is obvious that
       \begin{enumerate}[(i)]
       \item<1-> $G$ is a primitive permutation group.
       \item<1-> If $N\ssubnormal G$, then $C_G(N) = 1$.
-      \item<1-> $G$ contains no non-trivial abelian normal subgroup.
+      \item<1-> $G$ contains no nontrivial abelian normal subgroup.
       \item<1-> $G$ is not solvable.
       \item<1-> $G$ is subdirectly irreducible.
-      \item<1-> With the possible exception of at most one maximal subgroup, %, $M_1$ or $M_2$,
+      \item<1-> With the possible exception of either $M_1$ or $M_2$ (not both),
         all proper subgroups in the interval $\lb H,G \rb$ are core-free. 
       \end{enumerate}
     \end{theorem}
@@ -1844,7 +1864,7 @@ See Peter Cameron's blog at\\[6pt]
 %% \includegraphics[height=28mm]{Scott}
 %% \end{center}
 
-\end{frame}
+%% \end{frame}
 
 \begin{frame}[fragile,label=OSTheorem]{Aschbacher-O'Nan-Scott Theorem}
 Let $G$ be a primitive permutation
@@ -1865,7 +1885,7 @@ general linear group $\AGL(m,p)$.
   $d = |T|^m$.
   \end{itemize}
 \vskip2mm
-\item $N$ is non-regular, non-abelian, and
+\item $N$ is nonregular, nonabelian, and
   \begin{itemize}
   \item 
 \alert{(Almost simple type)} $m = 1$ and $T \leq G \leq \Aut(T)$.
